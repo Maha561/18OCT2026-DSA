@@ -1,0 +1,39 @@
+1929. Concatenation of Array
+class Solution {
+    public int[] getConcatenation(int[] nums) {
+        
+        int size = nums.length;
+
+        int NewSize = 2*size;
+
+        int[] ans = new int[NewSize];
+
+        int i =0;
+        int j=0;
+
+        while(j<NewSize){
+
+            if(i< size){
+
+                ans[j]=nums[i];
+                i++;
+            }
+            else{
+
+                if(j==size){
+
+                    i=0;
+                    ans[j]=nums[i];
+                i++;
+                }
+            }
+
+            j++;
+        }
+
+        return ans;
+
+
+
+    }
+}https://leetcode.com/problems/concatenation-of-array/?utm_source=chatgpt.com
